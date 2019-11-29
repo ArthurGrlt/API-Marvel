@@ -8,13 +8,14 @@ function getApiData() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             const data = JSON.parse(xhr.responseText);
-
-            const img = data.result.rers.length
-
-
-        
+            console.log(data);
+            
+            
         }
     }
-    xhr.open('GET', 'https://gateway.marvel.com:443/v1/public/characters?apikey=5fb0b1629aa96efb6843bf56ee43e2e5');
+    xhr.open('GET', 'https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=Spider-man&apikey=390b19eb2cf9452479bf0585b435d6c5');
     xhr.send()
 }
+
+getApiData();
+
