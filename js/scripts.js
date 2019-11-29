@@ -8,9 +8,20 @@ function getApiData() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             const data = JSON.parse(xhr.responseText);
-            console.log(data);
-            
-            
+
+            const img = data.data.results.thumbnail.path.lenght;
+
+            //const img = data.data.results[0].thumbnail.path + '.' + data.data.results[0].thumbnail.extension
+            //console.log(data)
+
+            for (let i = 0; i < rers; i++) {
+                if (data.data.results[i].thumbnail.path === 'critical') {
+                    hasProblem = true
+                }
+            }
+
+
+        
         }
     }
     xhr.open('GET', 'https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=Spider-man&apikey=390b19eb2cf9452479bf0585b435d6c5');
