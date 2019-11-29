@@ -1,0 +1,12 @@
+body {
+    background-color: #ee171f;
+}
+
+body .card {
+    background-color: #ee171f;
+}
+
+.img-fluid {
+    width: 20%;
+    margin-left: 40%;
+}
